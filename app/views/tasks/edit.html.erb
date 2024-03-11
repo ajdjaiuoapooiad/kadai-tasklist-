@@ -1,7 +1,7 @@
 <h1>id: <%= @task.id %> のタスク編集ページ</h1>
 
 
-<%= render 'form' %>
+<%= render 'form', task: @task %>
 
 
 <%= link_to '一覧に戻る', "/tasks" %>
