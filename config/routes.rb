@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
+  get 'toppage/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: 'tasks#index'
+  root to: 'toppage#index'
   
-  get "login" => "session#new"
-  post "login" => "session#create"
-  get "logout" => "session#destroy"
   
   get "signup" => "users#new"
   
