@@ -3,6 +3,10 @@
     <li>
       <%= link_to(task.id,"/tasks/#{task.id}") %> : <%= task.content %> &gt; <%= task.status %>
     </li>
+    
+    <% if current_user == task.user %>
+      <%= button_to "Delete", task, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+    <% end %>
 
   <% end %>
 </ul>

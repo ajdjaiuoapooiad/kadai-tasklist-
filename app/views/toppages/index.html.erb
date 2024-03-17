@@ -1,5 +1,24 @@
 <% if logged_in? %>
-  <p>ログイン完了ユーザ: <%= current_user.name %></p>
+  <div class="row">
+    <aside class="col-sm-4">
+      <%= form_with(model: @task) do |f| %>
+        <div class="mb-3">
+          <p>content</p>
+          <%= f.text_area :content, class: 'form-control', rows: 5 %>
+        </div>
+        
+        <div class="mb-3">
+          <p>status</p>
+          <%= f.text_area :status, class: 'form-control', rows: 5 %>
+        </div>
+        <%= f.submit 'Post', class: 'btn btn-primary w-100' %>
+      <% end %>
+    </aside>
+    <div class="col-sm-8">
+      <h2>タスク一覧</h2>
+      <%= render 'tasks/tasks', tasks: @tasks %>
+    </div>
+  </div>
 <% else %>
   <div class="bg-secondary p-3 p-sm-5 my-4 rounded">
     <div class="text-center text-white">
