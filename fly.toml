@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for tasklist4-blue-lake-4888 on 2024-03-31T02:35:37Z
+# fly.toml app configuration file generated for tasklist4-divine-sun-9993 on 2024-03-31T09:28:41Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'tasklist4-blue-lake-4888'
+app = 'tasklist4-divine-sun-9993'
 primary_region = 'nrt'
 console_command = '/rails/bin/rails console'
 
